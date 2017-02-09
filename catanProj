@@ -1,0 +1,16 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="8">
+            <File firstVisibleLine="111" xOffset="0" scrollWidth="1" startPos="3842" endPos="3842" selMode="0" lang="Javascript" encoding="-1" filename="E:\wamp64\www\catan_html\lib\hexHelpers.js" />
+            <File firstVisibleLine="12" xOffset="0" scrollWidth="1350" startPos="1740" endPos="1740" selMode="0" lang="Javascript" encoding="-1" filename="E:\wamp64\www\catan_html\lib\boardHelpers.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="918" startPos="387" endPos="387" selMode="0" lang="Javascript" encoding="-1" filename="E:\wamp64\www\catan_html\lib\diceHelpers.js" />
+            <File firstVisibleLine="37" xOffset="0" scrollWidth="1350" startPos="2139" endPos="2139" selMode="0" lang="Javascript" encoding="-1" filename="E:\wamp64\www\catan_html\lib\roadHelpers.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1350" startPos="1703" endPos="1703" selMode="0" lang="Javascript" encoding="-1" filename="E:\wamp64\www\catan_html\lib\roadPlacementHelpers.js" />
+            <File firstVisibleLine="12" xOffset="0" scrollWidth="1449" startPos="21" endPos="21" selMode="0" lang="Normal Text" encoding="-1" filename="E:\wamp64\www\catan_html\lib\roadGraph.json" />
+            <File firstVisibleLine="14" xOffset="0" scrollWidth="1332" startPos="1508" endPos="1508" selMode="0" lang="Javascript" encoding="-1" filename="E:\wamp64\www\catan_html\lib\tests.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1350" startPos="375" endPos="52" selMode="0" lang="Javascript" encoding="-1" filename="E:\wamp64\www\catan_html\lib\cityHelpers.js" />
+            <File firstVisibleLine="45" xOffset="0" scrollWidth="918" startPos="3360" endPos="3360" selMode="0" lang="HTML" encoding="-1" filename="E:\wamp64\www\catan_html\catan.html" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

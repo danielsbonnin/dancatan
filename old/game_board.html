@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div style="display: none;">
+            <img id="hex1" src="hex_120x120_outline.png"/>
+            <img id="hex_lumber" src="hex_120x120_lumber.png"/>
+        </div>
+    </head>
+    <body>
+        <h1>Catan</h1>
+        <canvas id="hex" width="1000" height="1000"
+        style="border:1px solid #000000;"></canvas>
+    </body>
+    <script>
+        window.onload = function() {
+        var canvas = document.getElementById("hex");
+        var ctx = canvas.getContext("2d");
+        // fill a rectange
+        //ctx.fillStyle = "#FF0000";
+        //ctx.fillRect(0,0,150,75);
+        
+        //draw a line
+        /*
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100);
+        ctx.stroke();
+        */
+        
+        // draw a circle
+        /*
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+        */
+        
+        // 1/4 px-width of a hex
+        var SCALE = 30;
+        //display an image
+        var row1_y = SCALE * 2;
+        var row2_y = SCALE * 5;
+        var row3_y = SCALE * 8;
+        var row4_y = SCALE * 11;
+        var row5_y = SCALE * 14;
+        var col1_x = SCALE * 2;
+        var col2_x = SCALE * 4;
+        var col3_x = SCALE * 6;
+        var col4_x = SCALE * 8;
+        var col5_x = SCALE * 10;
+        var col6_x = SCALE * 12;
+        var col7_x = SCALE * 14;
+        var col8_x = SCALE * 16;
+        var col9_x = SCALE * 18;
+        var col10_x = SCALE * 20;
+        
+        var img=document.getElementById("hex1");
+        ctx.drawImage(hex_lumber,col3_x, row1_y);
+        ctx.drawImage(img,col5_x, row1_y);
+        ctx.drawImage(img,col7_x, row1_y);
+        ctx.drawImage(img,col2_x, row2_y);
+        ctx.drawImage(img,col4_x,row2_y);
+        ctx.drawImage(img,col6_x,row2_y);
+        ctx.drawImage(img,col8_x, row2_y);
+        ctx.drawImage(img,col1_x, row3_y);
+        ctx.drawImage(img,col3_x,row3_y);
+        ctx.drawImage(img,col5_x,row3_y);
+        ctx.drawImage(img,col7_x,row3_y);
+        ctx.drawImage(img,col9_x, row3_y);
+        ctx.drawImage(img,col2_x, row4_y);
+        ctx.drawImage(img,col4_x, row4_y);
+        ctx.drawImage(img,col6_x, row4_y);
+        ctx.drawImage(img,col8_x, row4_y);
+        ctx.drawImage(img,col3_x, row5_y);
+        ctx.drawImage(img,col5_x, row5_y);
+        ctx.drawImage(img,col7_x, row5_y);
+        }
+    </script>
+</html>

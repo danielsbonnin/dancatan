@@ -1,0 +1,92 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+    <title>Dan Catan</title>
+    <script src="http://localhost/phaser/v2/build/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script src="lib/hexHelpers.js"></script>
+<script src="lib/diceHelpers.js"></script>
+<script src="lib/boardHelpers.js"></script>
+<script src="lib/roadHelpers.js"></script>
+<script src="lib/roadPlacementHelpers.js"></script>
+<script src="lib/cityHelpers.js"></script>
+<script src="lib/harborHelpers.js"></script>
+<script src="lib/dashboard.js"></script>
+<script src="lib/cards.js"></script>
+
+<script type="text/javascript">
+
+var player;
+var platforms;
+//var hexPoints;
+//var hexes;
+var displayHexes;
+var roads;
+var roadGraph;
+var cursors;
+var score = 0;
+var scoreText;
+var gb = GameBoard;
+const BOARD_HEIGHT = 900;
+const BOARD_WIDTH = 1400;
+const bgColor = "#D6F4FF";
+const HEX_SIDE_LENGTH = BOARD_HEIGHT / 15;
+const HEX_HEIGHT = HEX_SIDE_LENGTH * 2;
+const HEX_WIDTH = Math.sqrt(3) / 2 * HEX_HEIGHT; 
+const HEX_Y_OVERLAP = parseInt(HEX_HEIGHT / 4);
+const HEX_X_OVERLAP = parseInt(HEX_WIDTH / 2);
+const HEX_ORIGIN_X = 30;
+const HEX_ORIGIN_Y = 50;
+
+var game = new Phaser.Game(BOARD_WIDTH, BOARD_HEIGHT, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
+
+
+function preload() {
+    game.load.image('ground', 'assets/platform.png');
+    game.load.image('road_white', 'assets/road_white.png');
+    game.load.image('road_red', 'assets/road_red.png');
+    game.load.image('road_blue', 'assets/road_blue.png');
+    game.load.image('road_orange', 'assets/road_orange.png');
+    game.load.image('road_blank', 'assets/road_blank.png');
+    game.load.spritesheet('cities_sheet', 'assets/cities_sheet.png', 20, 10);
+    game.load.image('hex_wheat', 'assets/hex_wheat.png');
+    game.load.spritesheet('settlements_sheet', 'assets/settlements_sheet.png', 20, 10);
+    game.load.spritesheet('hex_sheet', 'assets/hex_sheet.png', 200, 180);
+    game.load.spritesheet('road_redsheet', 'assets/road_red_sheet.png', 60, 10);
+    game.load.spritesheet('road_sheet', 'assets/road_sheet.png', 60, 10);
+    game.load.spritesheet('dice_vals_sheet', 'assets/dice_vals_sheet.png', 40, 40);
+    game.load.spritesheet('harbor_sheet', 'assets/harbor_sheet.png', 40, 60);
+    game.load.spritesheet('card_sheet', 'assets/card_sheet.png', 200, 300);
+    game.load.spritesheet('dial_sheet', 'assets/dial_sheet.png', 60, 60);
+}
+var k = 0;
+
+function create() {
+
+    graphics = game.add.graphics(HEX_ORIGIN_X, HEX_ORIGIN_Y);
+    game.stage.setBackgroundColor(bgColor);
+    gb.setupType = "variable";
+    gb.setup();  // Assign resources, dicevalues to board hexes
+    gb.roads.forEach(function(road) {
+        road.sprite.bringToTop();
+    });
+}
+function update () {
+}
+
+function render () {
+    //game.debug.text("Over" + hex1.input.pointerOver(), 32, 32);
+}
+
+</script>
+
+</body>
+</html>
